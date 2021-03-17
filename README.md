@@ -21,9 +21,9 @@
   
 ## 📑 About
 
-Rocketshoes is a fake ecommerce from a shoe store, made using Next.js and React's Context API. The project was stylized using styled-components. You can see using the application in real time <a href="https://rocketshoes-neon.vercel.app/">by clicking here <img src=".github/favicon.png"/></a>
+<p>Rocketshoes is a fake ecommerce from a shoe store, made using Next.js and React's Context API. The project was stylized using styled-components. You can see using the application in real time <a href="https://rocketshoes-neon.vercel.app/">by clicking here <img src=".github/favicon.png" width="50"/></a>
 
-In the application you can select as many products as you want and follow the cart, as long as there are still products in stock. The application calculates the subtotal of each product and the total purchase.
+In the application you can select as many products as you want and follow the cart, as long as there are still products in stock. The application calculates the subtotal of each product and the total purchase.</p>
 
 ## 💻 Technologies
 
