@@ -1,5 +1,5 @@
 import { useRouter } from 'next/dist/client/router';
-import { createContext, ReactNode, useEffect, useState } from 'react';
+import { createContext, ReactNode, useState } from 'react';
 import { toast } from 'react-toastify';
 import FinishModal from '../components/FinishModal';
 import { api } from '../services/api';
@@ -16,7 +16,6 @@ export interface Product {
 }
 
 interface CartContextData {
-  products: Product[];
   cartProducts: Product[];
   addProduct: (id: number) => Promise<void>;
   updateAmount: (id: number, newAmount: number) => Promise<void>;
@@ -25,33 +24,17 @@ interface CartContextData {
   closeFinishModal: () => void;
 }
 
+export const CartContext = createContext({} as CartContextData);
+
 interface CartProviderProps {
   children: ReactNode;
 }
 
-export const CartContext = createContext({} as CartContextData);
-
 export const CartProvider = ({ children }: CartProviderProps) => {
-  const [products, setProducts] = useState([]);
   const [cartProducts, setCartProducts] = useState([]);
   const [isFinishModalOpen, setIsFinishModalOpen] = useState(false);
 
   const Router = useRouter();
-
-  useEffect(() => {
-    const getProducts = async () => {
-      const response = await api.get('products');
-
-      const data = response.data.map((product: Product) => ({
-        ...product,
-        priceFormatted: formatPrice(product.price)
-      }));
-
-      setProducts(data);
-    };
-
-    getProducts();
-  }, []);
 
   const updateAmount = async (id: number, newAmount: number) => {
     if (newAmount <= 0) return;
@@ -134,7 +117,6 @@ export const CartProvider = ({ children }: CartProviderProps) => {
   return (
     <CartContext.Provider
       value={{
-        products,
         cartProducts,
         addProduct,
         updateAmount,
