@@ -5,7 +5,7 @@
   <p>
     <img src="https://img.shields.io/badge/made%20by-Thales%20Macena-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=visual-studio-code&logoColor=2D325E" alt="Made by Thales Macena">
     <img alt="Top Language" src="https://img.shields.io/github/languages/top/thalesmacena/rocketshoes?color=2D325E&labelColor=F0DB4F&style=for-the-badge&logo=typescript&logoColor=2D325E">
-    <a href="https://github.com/thalesmacena/rocketshoes/commits/main">
+    <a href="https://github.com/thalesmacena/rocketshoes/commits/master">
       <img alt="Last Commits" src="https://img.shields.io/github/last-commit/thalesmacena/rocketshoes?color=2D325E&labelColor=F0DB4F&style=for-the-badge&logo=github&logoColor=2D325E">
     </a>
   </p>
@@ -85,6 +85,7 @@ yarn start
 ```
 
 The application will run on [localhost:3000](http://localhost:3000/)
+<<<<<<< HEAD
 
 ## 🏃 Next Steps
 - [x] Built with Context Api instead of redux
@@ -93,3 +94,5 @@ The application will run on [localhost:3000](http://localhost:3000/)
 - [ ] Dark Mode
 - [ ] Put option for product freight calculation
   
+=======
+>>>>>>> 9a48fc3f10a67c4030afd2384fe58772ffcee762
