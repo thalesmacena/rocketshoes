@@ -17,7 +17,9 @@
 - [🕵️‍♂️ view the project](#️️-view-the-project)
 - [💻 Technologies](#-technologies)
 - [✨ Installation](#-installation)
+- [⚙️ Config](#️-config)
 - [🔥 Running](#-running)
+- [🏃 Next Steps](#-next-steps)
   
   
 ## 📑 About
@@ -54,6 +56,21 @@ cd rocketshoes
 yarn
 ```
 
+## ⚙️ Config
+To run the app locally, you need to configure the base url of the api, open the `next.config.js` and replace `API_URL: 'https://rocketshoes-neon.vercel.app/api'` by `API_URL: 'http: // localhost: 3000 / api'` as in the example below:
+
+```javascript
+const withImages = require('next-images');
+
+module.exports = withImages({
+  esModule: true,
+  env: {
+    API_URL: 'http://localhost:3000/api'
+  }
+});
+
+```
+
 ## 🔥 Running
 You can run the application in development mode with the command:
 ```Powershell
@@ -68,3 +85,11 @@ yarn start
 ```
 
 The application will run on [localhost:3000](http://localhost:3000/)
+
+## 🏃 Next Steps
+- [x] Built with Context Api instead of redux
+- [x] Products as Server Side Props
+- [ ] Improving the Modal
+- [ ] Dark Mode
+- [ ] Put option for product freight calculation
+  
