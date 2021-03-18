@@ -61,7 +61,7 @@ export const Container = styled.div`
     animation-name: fill;
     animation-duration: 1.5s;
     background-color: #191a20;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in;
     animation-delay: 0;
     animation-fill-mode: both;
     animation-play-state: running;
@@ -73,21 +73,10 @@ export const Container = styled.div`
       background-color: #000000;
       border-radius: 100%;
     }
-    30% {
-      background-color: #000000;
-    }
-
-    60% {
-      background-color: #000000;
-    }
-    90% {
-      transform: scale(100);
-    }
 
     100% {
       background-color: #000000;
-      width: 100vw;
-      height: 100vw;
+      transform: scale(100);
     }
   }
 `;

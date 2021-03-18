@@ -110,8 +110,8 @@ export const CartProvider = ({ children }: CartProviderProps) => {
   };
 
   const closeFinishModal = async () => {
-    setIsFinishModalOpen(false);
     await Router.push('/');
+    setIsFinishModalOpen(false);
     setCartProducts([]);
   };
 
