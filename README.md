@@ -73,6 +73,6 @@ The application will run on [localhost:3000](http://localhost:3000/)
 ## 🏃 Next Steps
 - [x] Built with Context Api instead of redux
 - [x] Products as Server Side Props
-- [ ] Improving the Modal
+- [x] Improving the Modal
 - [ ] Dark Mode
 - [ ] Put option for product freight calculation
