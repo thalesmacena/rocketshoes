@@ -17,7 +17,6 @@
 - [🕵️‍♂️ view the project](#️️-view-the-project)
 - [💻 Technologies](#-technologies)
 - [✨ Installation](#-installation)
-- [⚙️ Config](#️-config)
 - [🔥 Running](#-running)
 - [🏃 Next Steps](#-next-steps)
   
@@ -54,21 +53,6 @@ cd rocketshoes
 
 # To install the dependencies
 yarn
-```
-
-## ⚙️ Config
-To run the app locally, you need to configure the base url of the api, open the `next.config.js` and replace `API_URL: 'https://rocketshoes-neon.vercel.app/api'` by `API_URL: 'http: // localhost: 3000 / api'` as in the example below:
-
-```javascript
-const withImages = require('next-images');
-
-module.exports = withImages({
-  esModule: true,
-  env: {
-    API_URL: 'http://localhost:3000/api'
-  }
-});
-
 ```
 
 ## 🔥 Running
