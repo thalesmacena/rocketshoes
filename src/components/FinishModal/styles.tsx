@@ -48,4 +48,46 @@ export const Container = styled.div`
     border: 0;
     font-size: 0px;
   }
+
+  button.hover {
+    transition: transform 0.2s;
+  }
+
+  button.hover:hover {
+    transform: scale(1.5);
+  }
+
+  button.animate {
+    animation-name: fill;
+    animation-duration: 1.5s;
+    background-color: #191a20;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-fill-mode: both;
+    animation-play-state: running;
+  }
+
+  @keyframes fill {
+    0% {
+      transform: scale(0.3);
+      background-color: #000000;
+      border-radius: 100%;
+    }
+    30% {
+      background-color: #000000;
+    }
+
+    60% {
+      background-color: #000000;
+    }
+    90% {
+      transform: scale(100);
+    }
+
+    100% {
+      background-color: #000000;
+      width: 100vw;
+      height: 100vw;
+    }
+  }
 `;

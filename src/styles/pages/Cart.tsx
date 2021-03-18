@@ -25,6 +25,11 @@ export const Container = styled.div`
       &:hover {
         background: ${darken(0.03, '#7159c1')};
       }
+
+      &:disabled {
+        background: #ebe8f6;
+        cursor: auto;
+      }
     }
   }
 `;

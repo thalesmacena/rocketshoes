@@ -16,6 +16,11 @@ const Cart = () => {
     openFinishModal
   } = useContext(CartContext);
 
+  const isEmpty = useMemo(() => {
+    const empty = !cartProducts.length;
+    return empty;
+  }, [cartProducts]);
+
   const total = useMemo(() => {
     const newTotal = cartProducts.reduce((acumulator, product) => {
       return acumulator + product.price * product.amount;
@@ -82,7 +87,11 @@ const Cart = () => {
       </ProductTable>
 
       <footer>
-        <button type="button" onClick={() => openFinishModal()}>
+        <button
+          type="button"
+          disabled={isEmpty}
+          onClick={() => openFinishModal()}
+        >
           Finalizar pedido
         </button>
         <Total>
