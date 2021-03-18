@@ -85,7 +85,6 @@ yarn start
 ```
 
 The application will run on [localhost:3000](http://localhost:3000/)
-<<<<<<< HEAD
 
 ## 🏃 Next Steps
 - [x] Built with Context Api instead of redux
