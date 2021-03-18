@@ -93,6 +93,3 @@ The application will run on [localhost:3000](http://localhost:3000/)
 - [ ] Improving the Modal
 - [ ] Dark Mode
 - [ ] Put option for product freight calculation
-  
-=======
->>>>>>> 9a48fc3f10a67c4030afd2384fe58772ffcee762
