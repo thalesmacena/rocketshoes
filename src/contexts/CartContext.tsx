@@ -32,7 +32,7 @@ interface CartProviderProps {
 
 export const CartProvider = ({ children }: CartProviderProps) => {
   const [cartProducts, setCartProducts] = useState([]);
-  const [isFinishModalOpen, setIsFinishModalOpen] = useState(true);
+  const [isFinishModalOpen, setIsFinishModalOpen] = useState(false);
 
   const Router = useRouter();
 
