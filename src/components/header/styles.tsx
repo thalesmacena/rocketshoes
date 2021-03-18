@@ -11,6 +11,17 @@ export const Logo = styled.img`
   cursor: pointer;
 `;
 
+export const RightContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  > svg {
+    cursor: pointer;
+    align-items: center;
+    margin-left: 2rem;
+  }
+`;
+
 export const Cart = styled.a`
   display: flex;
   align-items: center;
@@ -28,12 +39,12 @@ export const Cart = styled.a`
 
     strong {
       display: block;
-      color: #fff;
+      color: ${({ theme }) => theme.colors.title};
     }
 
     span {
       font-size: 12px;
-      color: #999;
+      color: ${({ theme }) => theme.colors.lightText};
     }
   }
 `;

@@ -49,7 +49,7 @@ const FinishModal = () => {
           onAnimationEnd={() => handleAnimateEnd()}
           className={isAnimate ? 'animate' : isHover ? 'hover' : ''}
         >
-          <MdCheckCircle size={36} color={isHover ? '#000' : '#191a20'} />
+          <MdCheckCircle size={36} color="#141419" />
         </button>
       </Container>
     </Overlay>

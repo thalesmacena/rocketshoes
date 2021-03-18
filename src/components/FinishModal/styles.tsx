@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Overlay = styled.div`
-  background: rgba(25, 26, 32, 0.8);
+  background: ${({ theme }) => theme.backgroundOverlay};
   position: fixed;
   top: 0;
   bottom: 0;
@@ -12,17 +12,17 @@ export const Overlay = styled.div`
   justify-content: center;
   align-items: center;
 
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 `;
 
 export const Container = styled.div`
-  background: #fff;
+  background: ${({ theme }) => theme.colors.backgroundLight};
   width: 100%;
   max-width: 400px;
   padding: 2rem 3rem;
   border-radius: 5px;
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  box-shadow: ${({ theme }) => theme.boxShadowModal};
   text-align: center;
   position: relative;
 
@@ -38,7 +38,7 @@ export const Container = styled.div`
 
   p {
     font-size: 1.25rem;
-    color: var(--color-text);
+    color: ${({ theme }) => theme.colors.titleInLight};
     margin-top: 0.25rem;
   }
 
@@ -60,7 +60,7 @@ export const Container = styled.div`
   button.animate {
     animation-name: fill;
     animation-duration: 1.5s;
-    background-color: #191a20;
+    background-color: ${({ theme }) => theme.colors.backgroundDark};
     animation-timing-function: ease-in;
     animation-delay: 0;
     animation-fill-mode: both;
@@ -70,12 +70,10 @@ export const Container = styled.div`
   @keyframes fill {
     0% {
       transform: scale(0.3);
-      background-color: #000000;
       border-radius: 100%;
     }
 
     100% {
-      background-color: #000000;
       transform: scale(100);
     }
   }

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   padding: 30px;
-  background: #fff;
+  background: ${({ theme }) => theme.colors.backgroundLight};
   border-radius: 4px;
 
   footer {
@@ -13,8 +13,8 @@ export const Container = styled.div`
     align-items: center;
 
     button {
-      background: #7159c1;
-      color: #fff;
+      background: ${({ theme }) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.textInPrimary};
       border: 0;
       border-radius: 4px;
       padding: 12px 20px;
@@ -23,11 +23,11 @@ export const Container = styled.div`
       transition: background 0.2s;
 
       &:hover {
-        background: ${darken(0.03, '#7159c1')};
+        background: ${({ theme }) => darken(0.03, theme.colors.primary)};
       }
 
       &:disabled {
-        background: #ebe8f6;
+        background: ${({ theme }) => theme.colors.primaryDisabled};
         cursor: auto;
       }
     }
@@ -38,14 +38,14 @@ export const ProductTable = styled.table`
   width: 100%;
 
   thead th {
-    color: #999;
+    color: ${({ theme }) => theme.colors.lightText};
     text-align: left;
     padding: 12px;
   }
 
   tbody td {
     padding: 12px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.border};
   }
 
   img {
@@ -53,7 +53,7 @@ export const ProductTable = styled.table`
   }
 
   strong {
-    color: #333;
+    color: ${({ theme }) => theme.colors.titleInLight};
     display: block;
   }
 
@@ -69,9 +69,9 @@ export const ProductTable = styled.table`
     align-items: center;
 
     input {
-      border: 1px solid #ddd;
+      border: 1px solid ${({ theme }) => theme.colors.inputBorder};
       border-radius: 4px;
-      color: #666;
+      color: ${({ theme }) => theme.colors.textInput};
       padding: 6px;
       width: 50px;
     }
@@ -89,7 +89,7 @@ export const Total = styled.div`
   align-items: baseline;
 
   span {
-    color: #999;
+    color: ${({ theme }) => theme.colors.lightText};
     font-weight: bold;
   }
 

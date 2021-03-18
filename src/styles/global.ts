@@ -1,9 +1,19 @@
-// eslint-disable-next-line import/no-absolute-path
 import 'react-toastify/dist/ReactToastify.css';
 import { createGlobalStyle } from 'styled-components';
-import background from '../../public/background.svg';
 
 export default createGlobalStyle`
+  @media(max-width: 1080px) {
+    html {
+      font-size: 93.75%;
+    }
+  }
+  
+  @media(max-width: 720px) {
+    html {
+      font-size: 87.5%;
+    }
+  }
+  
   * {
     margin: 0;
     padding: 0;
@@ -11,15 +21,14 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   
-  body { 
-    background: url(${background}) no-repeat center top, ${(props) =>
-  props.theme.colors.background};
+  body {
+    background: ${({ theme }) => theme.background};
 
     -webkit-font-smoothing: antialiased;
   }
 
   body, input, button {
-    font: 14px 400 Roboto, sans-serif;
+    font: 400 0.875rem Roboto, sans-serif;
   }
 
   #__next {
