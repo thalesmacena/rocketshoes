@@ -1,5 +1,5 @@
 import { useRouter } from 'next/dist/client/router';
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode, useMemo, useState } from 'react';
 import { toast } from 'react-toastify';
 import FinishModal from '../components/FinishModal';
 import { api } from '../services/api';
@@ -18,6 +18,7 @@ export interface Product {
 interface CartContextData {
   cartProducts: Product[];
   fretePrice: number;
+  total: string;
   addProduct: (id: number) => Promise<void>;
   updateAmount: (id: number, newAmount: number) => Promise<void>;
   removeFromCart: (id: number) => Promise<void>;
@@ -105,6 +106,10 @@ export const CartProvider = ({ children }: CartProviderProps) => {
       newCart.splice(productIndex, 1);
 
       setCartProducts(newCart);
+
+      if (!newCart.length) {
+        setFretePrice(0);
+      }
     }
   };
 
@@ -126,6 +131,16 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     setFretePrice(fretePriceFormatted);
   };
 
+  const total = useMemo(() => {
+    const newTotal = cartProducts.reduce((acumulator, product) => {
+      return acumulator + product.price * product.amount;
+    }, 0);
+
+    const TotalFrete = newTotal + fretePrice;
+
+    return formatPrice(TotalFrete);
+  }, [cartProducts, fretePrice]);
+
   return (
     <CartContext.Provider
       value={{
@@ -136,7 +151,8 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         removeFromCart,
         openFinishModal,
         closeFinishModal,
-        setNumberFretePrice
+        setNumberFretePrice,
+        total
       }}
     >
       {children}

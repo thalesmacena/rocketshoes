@@ -1,13 +1,19 @@
 import { useContext, useMemo, useState } from 'react';
 import { CartContext } from '../../contexts/CartContext';
 import { api } from '../../services/api';
+import { formatPrice } from '../../util/format';
 import { ContainerFrete, ContainerTotalFrete } from './styles';
 
 const FreteInput = () => {
-  const { cartProducts, setNumberFretePrice } = useContext(CartContext);
+  const { cartProducts, setNumberFretePrice, fretePrice } = useContext(
+    CartContext
+  );
 
   const [newCep, setNewCep] = useState('');
-  const [fretePrice, setFretePrice] = useState('R$ 0,00');
+
+  const frete = useMemo(() => {
+    return formatPrice(fretePrice);
+  }, [fretePrice]);
 
   const isCartEmpty = useMemo(() => {
     const empty = !cartProducts.length;
@@ -40,7 +46,6 @@ const FreteInput = () => {
     const { Valor } = response.data[0];
 
     setNumberFretePrice(Valor);
-    setFretePrice(`R$: ${Valor}`);
     setNewCep('');
   };
 
@@ -55,7 +60,7 @@ const FreteInput = () => {
         />
 
         <button
-          disabled={isInputNotFilled}
+          disabled={isInputNotFilled || isCartEmpty}
           type="button"
           onClick={() => handleCalculePrice()}
         >
@@ -65,7 +70,7 @@ const FreteInput = () => {
 
       <ContainerTotalFrete>
         <span>Total</span>
-        <strong>{fretePrice}</strong>
+        <strong>{frete}</strong>
       </ContainerTotalFrete>
     </ContainerFrete>
   );

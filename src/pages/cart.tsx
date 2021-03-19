@@ -8,30 +8,20 @@ import {
 import FreteInput from '../components/FreteInput';
 import { CartContext, Product } from '../contexts/CartContext';
 import { Container, ProductTable, Total } from '../styles/pages/Cart';
-import { formatPrice } from '../util/format';
 
 const Cart = () => {
   const {
     cartProducts,
-    fretePrice,
     updateAmount,
     removeFromCart,
+    total,
     openFinishModal
   } = useContext(CartContext);
   const isEmpty = useMemo(() => {
     const empty = !cartProducts.length;
+
     return empty;
   }, [cartProducts]);
-
-  const total = useMemo(() => {
-    const newTotal = cartProducts.reduce((acumulator, product) => {
-      return acumulator + product.price * product.amount;
-    }, 0);
-
-    const TotalFrete = newTotal + fretePrice;
-
-    return formatPrice(TotalFrete);
-  }, [cartProducts, fretePrice]);
 
   const increment = (product: Product) => {
     updateAmount(product.id, product.amount + 1);
