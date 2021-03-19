@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import { useContext, useMemo } from 'react';
 import {
-  MdAddCircleOutline,
-  MdDelete,
-  MdRemoveCircleOutline
+    MdAddCircleOutline,
+    MdDelete,
+    MdRemoveCircleOutline
 } from 'react-icons/md';
-import FreteInput from '../components/FreteInput';
+import ShippingInput from '../components/ShippingInput';
 import { CartContext, Product } from '../contexts/CartContext';
 import { Container, ProductTable, Total } from '../styles/pages/Cart';
 
@@ -84,7 +84,7 @@ const Cart = () => {
           </tbody>
         </ProductTable>
 
-        <FreteInput />
+        {!isEmpty && <ShippingInput />}
 
         <footer>
           <button

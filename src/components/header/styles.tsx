@@ -18,7 +18,7 @@ export const RightContainer = styled.div`
   > svg {
     cursor: pointer;
     align-items: center;
-    margin-left: 2rem;
+    margin: 0 2rem;
   }
 `;
 

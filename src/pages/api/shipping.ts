@@ -32,7 +32,7 @@ export default async function handler(
     nVlAltura: 10
   };
 
-  const frete = await correios.calcPreco(args);
+  const shipping = await correios.calcPreco(args);
 
-  return res.status(200).json(frete);
+  return res.status(200).json(shipping);
 }

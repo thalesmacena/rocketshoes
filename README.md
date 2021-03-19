@@ -75,4 +75,5 @@ The application will run on [localhost:3000](http://localhost:3000/)
 - [x] Products as Server Side Props
 - [x] Improving the Modal
 - [x] Light Theme
-- [ ] Put option for product freight calculation
+- [x] Put option for product freight calculation
+- [ ] Responsive Cart

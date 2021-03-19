@@ -15,6 +15,7 @@ export const Container = styled.div`
     button {
       background: ${({ theme }) => theme.colors.primary};
       color: ${({ theme }) => theme.colors.textInPrimary};
+      height: 3.5rem;
       border: 0;
       border-radius: 5px;
       padding: 0.75rem 1.25rem;
@@ -73,15 +74,16 @@ export const ProductTable = styled.table`
       border: 1px solid ${({ theme }) => theme.colors.inputBorder};
       border-radius: 4px;
       color: ${({ theme }) => theme.colors.textInput};
-      padding: 0.375ren;
+      padding: 0.375rem;
       width: 3.25rem;
+      text-align: center;
     }
   }
 
   button {
     background: none;
     border: 0;
-    padding: 0.375ren;
+    padding: 0.375rem;
   }
 `;
 
