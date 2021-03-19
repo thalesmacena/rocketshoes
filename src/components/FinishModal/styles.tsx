@@ -76,4 +76,8 @@ export const Container = styled.div`
       transform: scale(100);
     }
   }
+
+  @media only screen and (max-width: 585px) {
+    animation-duration: 0.8;
+  }
 `;
