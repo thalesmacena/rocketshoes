@@ -28,7 +28,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
   useEffect(() => {
     const storedTheme = Cookies.get('theme');
-    setTheme(storedTheme || 'light');
+    setTheme(storedTheme || 'dark');
   }, []);
 
   useEffect(() => {
