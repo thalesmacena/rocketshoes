@@ -4,7 +4,7 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px 0;
+  margin: 3.125rem 0;
 `;
 
 export const Logo = styled.img`
@@ -35,7 +35,7 @@ export const Cart = styled.a`
 
   div {
     text-align: right;
-    margin-right: 10px;
+    margin-right: 0.625rem;
 
     strong {
       display: block;
@@ -43,7 +43,7 @@ export const Cart = styled.a`
     }
 
     span {
-      font-size: 12px;
+      font-size: 0.75rem;
       color: ${({ theme }) => theme.colors.lightText};
     }
   }

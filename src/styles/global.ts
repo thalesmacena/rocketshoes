@@ -34,7 +34,7 @@ export default createGlobalStyle`
   #__next {
     max-width: 1020px;
     margin: 0 auto;
-    padding: 0 20px 50px;
+    padding: 0 1.25rem 3.125rem;
   }
 
   button {

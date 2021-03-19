@@ -18,7 +18,7 @@ export const darkTheme = {
   },
   background: `url(${background}) no-repeat center top, #191a20`,
   backgroundOverlay: 'rgba(25, 26, 32, 0.8)',
-  boxShadowModal: '0 0 60px rgba(0, 0, 0, 0.05)'
+  boxShadowModal: '0 0 3.75rem rgba(0, 0, 0, 0.05)'
 };
 
 export const lightTheme = {
@@ -38,5 +38,5 @@ export const lightTheme = {
   },
   background: `url(${backgroundLight}) no-repeat center top, #DCDAD7`,
   backgroundOverlay: 'rgba(220, 218, 215, 0.8)',
-  boxShadowModal: '0 0 60px rgba(0, 0, 0, 0.08)'
+  boxShadowModal: '0 0 3.75rem rgba(0, 0, 0, 0.08)'
 };

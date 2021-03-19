@@ -5,6 +5,7 @@ import {
   MdDelete,
   MdRemoveCircleOutline
 } from 'react-icons/md';
+import FreteInput from '../components/FreteInput';
 import { CartContext, Product } from '../contexts/CartContext';
 import { Container, ProductTable, Total } from '../styles/pages/Cart';
 import { formatPrice } from '../util/format';
@@ -12,11 +13,11 @@ import { formatPrice } from '../util/format';
 const Cart = () => {
   const {
     cartProducts,
+    fretePrice,
     updateAmount,
     removeFromCart,
     openFinishModal
   } = useContext(CartContext);
-
   const isEmpty = useMemo(() => {
     const empty = !cartProducts.length;
     return empty;
@@ -27,8 +28,10 @@ const Cart = () => {
       return acumulator + product.price * product.amount;
     }, 0);
 
-    return formatPrice(newTotal);
-  }, [cartProducts]);
+    const TotalFrete = newTotal + fretePrice;
+
+    return formatPrice(TotalFrete);
+  }, [cartProducts, fretePrice]);
 
   const increment = (product: Product) => {
     updateAmount(product.id, product.amount + 1);
@@ -90,6 +93,8 @@ const Cart = () => {
             ))}
           </tbody>
         </ProductTable>
+
+        <FreteInput />
 
         <footer>
           <button

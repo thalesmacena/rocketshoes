@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
 import { ToastContainer } from 'react-toastify';
-import Header from '../components/Header/index';
+import Header from '../components/Header';
 import { CartProvider } from '../contexts/CartContext';
 import { ThemeProvider } from '../contexts/ThemeContext';
 

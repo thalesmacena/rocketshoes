@@ -2,18 +2,23 @@ import { darken } from 'polished';
 import styled from 'styled-components';
 
 export const ProductList = styled.ul`
+  min-width: 400px;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, 300px);
-  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-gap: 1.25rem;
   list-style: none;
+
+  @media (min-width: 585px) {
+    grid-template-columns: repeat(auto-fit, 19rem);
+  }
 
   li {
     display: flex;
     flex-direction: column;
     background-color: ${({ theme }) => theme.colors.backgroundLight};
     border-radius: 4px;
-    padding: 20px;
+    padding: 1.25rem;
 
     img {
       align-self: center;
@@ -21,16 +26,16 @@ export const ProductList = styled.ul`
     }
 
     > strong {
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 1rem;
+      line-height: 1.25rem;
       color: ${({ theme }) => theme.colors.titleInLight};
-      margin-top: 5px;
+      margin-top: 0.313rem;
     }
 
     > span {
-      font-size: 21px;
+      font-size: 1.3rem;
       font-weight: bold;
-      margin: 5px 0 20px;
+      margin: 0.3rem 0 1.25rem;
     }
 
     button {
@@ -52,11 +57,11 @@ export const ProductList = styled.ul`
       div {
         display: flex;
         align-items: center;
-        padding: 12px;
+        padding: 0.75rem;
         background: rgba(0, 0, 0, 0.1);
 
         svg {
-          margin-right: 5px;
+          margin-right: 0.313rem;
         }
       }
 

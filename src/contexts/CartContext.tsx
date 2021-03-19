@@ -17,11 +17,13 @@ export interface Product {
 
 interface CartContextData {
   cartProducts: Product[];
+  fretePrice: number;
   addProduct: (id: number) => Promise<void>;
   updateAmount: (id: number, newAmount: number) => Promise<void>;
   removeFromCart: (id: number) => Promise<void>;
   openFinishModal: () => void;
   closeFinishModal: () => void;
+  setNumberFretePrice: (frete: string) => Promise<void>;
 }
 
 export const CartContext = createContext({} as CartContextData);
@@ -33,6 +35,7 @@ interface CartProviderProps {
 export const CartProvider = ({ children }: CartProviderProps) => {
   const [cartProducts, setCartProducts] = useState([]);
   const [isFinishModalOpen, setIsFinishModalOpen] = useState(false);
+  const [fretePrice, setFretePrice] = useState(0);
 
   const Router = useRouter();
 
@@ -115,15 +118,25 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     setCartProducts([]);
   };
 
+  const setNumberFretePrice = async (frete: string) => {
+    const [reais, centavos] = frete.split(',');
+
+    const fretePriceFormatted = Number(reais) + Number(centavos) / 100;
+
+    setFretePrice(fretePriceFormatted);
+  };
+
   return (
     <CartContext.Provider
       value={{
         cartProducts,
+        fretePrice,
         addProduct,
         updateAmount,
         removeFromCart,
         openFinishModal,
-        closeFinishModal
+        closeFinishModal,
+        setNumberFretePrice
       }}
     >
       {children}

@@ -19,7 +19,7 @@ export const Overlay = styled.div`
 export const Container = styled.div`
   background: ${({ theme }) => theme.colors.backgroundLight};
   width: 100%;
-  max-width: 400px;
+  max-width: 25rem;
   padding: 2rem 3rem;
   border-radius: 5px;
   box-shadow: ${({ theme }) => theme.boxShadowModal};
@@ -46,7 +46,6 @@ export const Container = styled.div`
     margin-top: 2rem;
     background: transparent;
     border: 0;
-    font-size: 0px;
   }
 
   button.hover {
