@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <a href="https://rocketshoes-neon.vercel.app/"><img src=".github/banner.svg" width="546" alt="Rocketshoes" /></a>
+  <a href="https://rocketshoes-thalesmacena.vercel.app/"><img src=".github/banner.svg" width="546" alt="Rocketshoes" /></a>
   <br />
   <p>
     <img src="https://img.shields.io/badge/made%20by-Thales%20Macena-2D325E?labelColor=F0DB4F&style=for-the-badge&logo=visual-studio-code&logoColor=2D325E" alt="Made by Thales Macena">
@@ -28,7 +28,7 @@ Rocketshoes is a fake ecommerce from a shoe store, made using Next.js and React'
 In the application you can select as many products as you want and follow the cart, as long as there are still products in stock. The application calculates the subtotal of each product and the total purchase.
 
 ## 🕵️‍♂️ view the project
-👉 [https://rocketshoes-neon.vercel.app/](https://rocketshoes-neon.vercel.app/)
+👉 [https://rocketshoes-thalesmacena.vercel.app/](https://rocketshoes-thalesmacena.vercel.app/)
 
 ## 💻 Technologies
 

@@ -5,7 +5,7 @@ module.exports = withImages({
   env: {
     API_URL:
       process.env.NODE_ENV === 'production'
-        ? 'https://rocketshoes-neon.vercel.app/api'
+        ? 'https://rocketshoes-thalesmacena.vercel.app/api'
         : 'http://localhost:3000/api'
   }
 });
