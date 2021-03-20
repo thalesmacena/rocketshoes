@@ -1,7 +1,6 @@
 import { useContext, useMemo, useState } from 'react';
-import { CartContext } from '../../contexts/CartContext';
-import { api } from '../../services/api';
-import { formatPrice } from '../../util/format';
+import { CartContext } from '../contexts/CartContext';
+import { api } from '../services/api';
 import {
   ContainerInput,
   ContainerShipping,
@@ -9,7 +8,8 @@ import {
   DisableButton,
   LoadingCircle,
   ProgressBar
-} from './styles';
+} from '../styles/components/ShippingInput';
+import { formatPrice } from '../util/format';
 
 const ShippingInput = () => {
   const { setNumberShippingPrice, shippingPrice } = useContext(CartContext);

@@ -1,8 +1,8 @@
 /* eslint-disable no-nested-ternary */
 import { useContext, useMemo, useState } from 'react';
 import { MdCheckCircle } from 'react-icons/md';
-import { CartContext } from '../../contexts/CartContext';
-import { Container, Overlay } from './styles';
+import { CartContext } from '../contexts/CartContext';
+import { Container, Overlay } from '../styles/components/FinishModal';
 
 const FinishModal = () => {
   const { cartProducts, closeFinishModal } = useContext(CartContext);

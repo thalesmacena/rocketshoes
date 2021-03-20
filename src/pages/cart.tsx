@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { useContext, useMemo } from 'react';
 import {
-    MdAddCircleOutline,
-    MdDelete,
-    MdRemoveCircleOutline
+  MdAddCircleOutline,
+  MdDelete,
+  MdRemoveCircleOutline
 } from 'react-icons/md';
 import ShippingInput from '../components/ShippingInput';
 import { CartContext, Product } from '../contexts/CartContext';

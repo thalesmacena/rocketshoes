@@ -5,9 +5,14 @@ import {
   MdBrightnessLow,
   MdShoppingBasket
 } from 'react-icons/md';
-import { CartContext } from '../../contexts/CartContext';
-import { ThemeContext } from '../../contexts/ThemeContext';
-import { Cart, Container, Logo, RightContainer } from './styles';
+import { CartContext } from '../contexts/CartContext';
+import { ThemeContext } from '../contexts/ThemeContext';
+import {
+  Cart,
+  Container,
+  Logo,
+  RightContainer
+} from '../styles/components/Header';
 
 const Header = () => {
   const { cartProducts } = useContext(CartContext);
