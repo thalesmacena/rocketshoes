@@ -121,6 +121,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     await Router.push('/');
     setIsFinishModalOpen(false);
     setCartProducts([]);
+    setShippingPrice(0);
   };
 
   const setNumberShippingPrice = async (shipping: string) => {
